@@ -22,7 +22,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: (https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj/hub/interactive-card-component-created-using-html-and-css-8RENIzS-ax)
 - Live Site URL: [Vercel](https://order-summary-component-main-silk.vercel.app/)
 
 ## My process
