@@ -1,0 +1,192 @@
+/* Root variables */
+
+:root {
+    /* Colors */
+    --clr-primary-pale-blue: hsl(225, 100%, 94%);
+    --clr-primary-bright-blue: hsl(245, 75%, 52%);
+
+    --clr-accent-white: hsl(0, 0%, 100%);
+    --clr-accent-very-pale-blue: hsl(225, 100%, 98%);
+    --clr-accent-desaturated-blue: hsl(224, 23%, 55%);
+    --clr-accent-dark-blue: hsl(223, 47%, 23%);
+    /* Fonts */
+    font-family: 'Red Hat Display', sans-serif;
+    --fw-regular: 500;
+    --fw-bold: 700;
+    --fw-very-bold: 900;
+    font-size: 16px;
+}
+
+/* Reset based on Josh Comeau's Modern CSS Reset:https://www.joshwcomeau.com/css/custom-css-reset/  */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialised;
+}
+
+img,svg {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+p, h1 {
+    overflow-wrap: break-word;
+}
+
+/* General styling */
+
+body {
+    font-weight: var(--fw-regular);
+    /* background image settings */
+    background-color: var(--clr-primary-pale-blue);
+    background-image: url(images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Variables */
+    --spacing: 1rem;
+    /* Layout */
+    display: grid;
+    place-content: center;
+}
+
+p {
+    color: var(--clr-accent-desaturated-blue);
+}
+
+@media (min-width: 376px)  {
+    body {
+        background-color: var(--clr-primary-pale-blue);
+        background-image: url(images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+}
+
+.card {
+    background-color: var(--clr-accent-white);
+    overflow: hidden;
+
+    max-height: 45rem;
+    max-width: 20rem;
+    border-radius: var(--spacing);
+}
+
+.container {
+    margin: 1.5rem;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1.5rem;
+}
+
+.card__info {
+    text-align: center;
+    display: grid;
+    grid-auto-flow: row;
+    gap: var(--spacing);
+    padding: 0.5rem;
+}
+
+.card__header {
+    font-size: 1.4rem;
+    color: var(--clr-accent-dark-blue);
+    font-weight: var(--fw-very-bold);
+}
+
+.card__description {
+    font-size: 0.8rem;
+    padding-inline: .2rem;
+}
+
+.card__plan {
+    background-color: var(--clr-accent-very-pale-blue);
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing);
+    padding: var(--spacing);
+    align-items: center;
+    font-size: .85rem;
+}
+
+.card__plan-icon {
+    background-color: var(--clr-primary-pale-blue);
+    border-radius: 50%;
+}
+
+.card__plan-price span {
+    color: var(--clr-accent-dark-blue);
+    font-weight: var(--fw-very-bold);
+}
+
+.card__plan a {
+    text-decoration: underline;
+    color: var(--clr-primary-bright-blue);
+    font-weight: var(--fw-bold);
+}
+
+.card__plan a:hover {
+    text-decoration: none;
+    color: var(--clr-accent-desaturated-blue);
+}
+
+.buttons {
+    display: grid;
+    gap: .5rem;
+}
+
+.btn {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 0.85rem;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn-proceed {
+    color: var(--clr-accent-white);
+    font-weight: var(--fw-bold);
+    background-color: var(--clr-primary-bright-blue);
+    
+}
+
+.btn-proceed:hover {
+    background-color: var(--clr-accent-desaturated-blue);
+    
+}
+
+.btn-cancel {
+    color: var(--clr-accent-desaturated-blue);
+    font-weight: var(--fw-bold);
+    background-color: var(--clr-accent-white);
+}
+
+.btn-cancel:hover {
+    color: var(--clr-accent-dark-blue);
+}
